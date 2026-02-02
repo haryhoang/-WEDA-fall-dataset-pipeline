@@ -18,8 +18,9 @@ def load_and_merge_one_trial(folder_path, prefix):
         
     ], axis=1)
 
-    
-    df_features = extract_window_to_second(df)
+    # IMPORTANT: if you process with fall_dataset, remember to change this code below to
+    # df_features = extract_peak(df)
+    df_features = extract_window(df)
     df_features['trial'] = prefix
     
     return df_features
@@ -33,6 +34,7 @@ def load_all_file(folder_path):
         for f in os.listdir(folder_path)
         if f.endswith('.csv')
         and int(re.search(r'U(\d+)', f).group(1)) <= 12
+        # 12 files for train and 3 files for test
     })
 
     for prefix in prefixes:
