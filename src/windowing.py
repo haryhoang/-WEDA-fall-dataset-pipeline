@@ -1,5 +1,5 @@
 
-def extract_window_to_second(data, window = 50):
+def extract_window(data, window = 50):
     sample = []
 
     for i in range(0, len(data) - window + 1, window):
@@ -10,7 +10,7 @@ def extract_window_to_second(data, window = 50):
     return pd.DataFrame(sample) 
 
 
-def extract_peak_to_window(data, window = 25):
+def extract_peak(data, window = 25):
     data['svm'] = np.sqrt(data['ax']**2 + data['ay']**2 + data['az']**2)
     peak_index = data['svm'].idxmax()
 
