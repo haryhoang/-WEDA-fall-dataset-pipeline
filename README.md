@@ -31,7 +31,7 @@ As shown below, the pipeline extracts specific signal signatures:
 
 ## 📂 Project Structure
 
-```text
+
 Sensor-HAR-Pipeline/
 ├── data/
 │   ├── raw/               # Original datasets WEDA
@@ -42,6 +42,7 @@ Sensor-HAR-Pipeline/
 │   └── pipeline.py        # Main ETL script to process full datasets
 ├── output/                # Generated plots and reports
 └── README.md              # Project Documentation
+
 
 ## 🛠️ How to Use
 
