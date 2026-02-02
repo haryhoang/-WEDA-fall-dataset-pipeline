@@ -76,13 +76,18 @@ Paper: Marques, J. et al. "WEDA: Wrist Elderly Daily Activity and Fall Dataset."
 ```text
 Sensor-HAR-Pipeline/
 ├── data/
-│   ├── raw/               # Original datasets (WEDA, SisFall)
-│   └── processed/         # Cleaned CSVs ready for ML training
-├── notebooks/             # Jupyter Notebooks for EDA & Prototyping
+│   ├── raw/               
+│   └── processed/         # Cleaned example CSVs ready for ML training
+├── notebooks/             # Generated plots and reports
 ├── src/
 │   ├── features.py        # Mathematical formulas for feature extraction
-│   └── pipeline.py        # Main ETL script to process full datasets
-├── output/                # Generated plots and reports
+│   └── pipeline.py       
+│   └── window.py          # Cutting window and cut around peak
+│   └── main.py   
+│   └── precprocessing.py        
+│
+├── gitinore
+├── LICENSE
 └── README.md              # Project Documentation
 
 
